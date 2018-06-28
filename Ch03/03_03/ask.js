@@ -1,3 +1,4 @@
+//Standard input and standard output
 var questions = [
 	"What is your name",
 	"What is your favorite hobby",

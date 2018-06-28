@@ -1,3 +1,4 @@
+//Global timing funcitons
 var waitTime = 3000; //after 3 seconds
 var currentTime = 0;
 var waitInterval = 500; //10 times a second. 500 half a second
