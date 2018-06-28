@@ -7,12 +7,16 @@ var sayings = [
     "An investment in knowledge pays the best interest.",
     "Well done is better than well said."
 ];
-
+/*
+We are creating an interval, so every second we are going to randomly write one of 
+these sayings to the standard output object.
+*/
 var interval = setInterval(function() {
 	var i = Math.floor(Math.random() * sayings.length);
 	process.stdout.write(`${sayings[i]} \n`);
 }, 1000);
 
+//Create a listener on the 'data' event
 process.stdin.on('data', function(data) {
 	console.log(`STDIN Data Recieved -> ${data.toString().trim()}`);
 	clearInterval(interval);
