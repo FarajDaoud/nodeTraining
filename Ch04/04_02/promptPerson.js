@@ -34,4 +34,4 @@ rl.on('close', function(){
 	//%s is a placehoder for a string, %j is a placeholder for json string.
 	console.log("%s is a real person that says %j", realPerson.name, realPerson.sayings);
 	process.exit();
-}); //will listen for a close event.
+});
