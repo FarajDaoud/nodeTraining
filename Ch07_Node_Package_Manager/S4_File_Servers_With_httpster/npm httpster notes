@@ -1,0 +1,2 @@
+Instead of creating a web server from essentially scratch, npm has a lot of tools that we can use to help us do this. The first tool that we're going to look at is something called httpster. I can come down here in my find packages bar and look for httpster, and there it is. Httpster will give us a static file server, so with this node module we can build a web server that will serve static content.
+
