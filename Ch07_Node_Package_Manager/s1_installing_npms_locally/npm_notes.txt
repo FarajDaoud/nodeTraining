@@ -1,0 +1,8 @@
+Installing npms locally
+
+npm -v : returns the version of npm installed.
+
+npm install <package name> //no spaces all lowercase
+
+npm ls: lists all npm packages installed in the current directory.
+
