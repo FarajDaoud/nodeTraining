@@ -1,4 +1,6 @@
-var http = require("http")
+/* jshint esnext: true */
+
+var http = require("http");
 
 http.createServer(function(req, res) {
 
@@ -9,10 +11,10 @@ http.createServer(function(req, res) {
          <title>Web Server</title>
        </head>
        <body>
-         <h1>Hello World</h1>
+         <h1>Hello Hello Hello</h1>
      </html> 
    `);
 
-}).listen(3000)
+}).listen(3000);
 
 console.log("Web Server running at http://localhost:3000");
