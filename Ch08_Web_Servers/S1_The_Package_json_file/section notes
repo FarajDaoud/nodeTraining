@@ -1,0 +1,18 @@
+A package.json file is a manifest that contains information about our app.
+It will allow us to easily distribute our application code without having to worry about distributing all the dependencies as well. 
+
+packages: express, cors, body-parser
+
+npm install <package name> --save
+
+The --save flag will add this dependency to my package.json file 
+
+
+
+
+
+
+
+
+
+So, the package.json file is important for everyone of our node applications or libraries. It gives us a manifest of information about the package and it also keeps track of all the dependencies that this package requires.
