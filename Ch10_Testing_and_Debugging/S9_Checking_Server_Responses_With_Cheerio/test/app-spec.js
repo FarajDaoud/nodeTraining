@@ -1,12 +1,21 @@
 var request = require("supertest");
 var expect = require('chai').expect;
+var cheerio = require('cheerio');
 var rewire = require('rewire');
 var app = rewire('../app');
 
 describe("Dictionary App", function () {
 
     it("Loads the home page", function(done) {
-        request(app).get("/").expect(200).end(done);
+        request(app)
+        .get("/")
+        .expect(200)
+        .end(function(err, res) {
+          var $ = cheerio.load(res.text);
+          var pageHeading = $("body>h1:first-child").text();
+          expect(pageHeading).to.equal("Skier Dictionary");
+          done();
+        });
     });
 
     describe("Dictionary API", function () {
@@ -28,7 +37,15 @@ describe("Dictionary App", function () {
         });
 
         it("GETS dictionary-api", function(done) {
-            request(app).get("/dictionary-api").expect(200).end(done);
+            var defs = this.defs;
+            request(app)
+            .get("/dictionary-api")
+            .expect(200)
+            .end(function(err, res) {
+              var terms = JSON.parse(res.text);
+              expect(terms).to.deep.equal(defs);
+              done();
+            });
         });
 
         it("POSTS dictionary-api", function(done) {
